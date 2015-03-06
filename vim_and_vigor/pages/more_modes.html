@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head> 
+ 	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<title>Modes</title>
+ </head>
+<body>
+	<h1>Switching Between Modes</h1>
+	<p>To get out of whatever mode you are in (especially in case you don't know 
+	or can't remember what mode you're in), just press the <Esc> key twice, which 
+	will return you to normal mode. The only mode in which you cannot do this is ex 
+	mode, where instead you must type ":visual" in order to return to normal mode. 
+	Once you have returned to normal mode, you will see the screen flash or head a 
+	bell to let you know you have succeeded.</p>
+	<p>Switching to other modes:</p>
+	<ol>
+		<li>Normal mode to visual mode: type "V" (non case-sensitive) or "^V"<li>
+		<li>Normal mode to select mode: select text with the mouse while the 
+		'selectmode' option contains 'mouse' OR hold the shift key and use a non-
+		printable command to move the cursor while the 'selectmode' option 
+		contains 'key'</li>
+		<li>Normal mode to insert mode: type "I", "A", "O", "C", or "S" (non case-
+		sensitive)</li>
+		<li>Normal mode to replace mode: type "R" or "gR"</li>
+		<li>Normal mode to command-line mode: type ":", "/", "?", or "!"</li>
+		<li>Normal mode to ex mode: type "Q"</li>
+		<li>Visual mode to normal mode: type "<Esc>+v", "v", or "CTRL+V"</li>
+		<li>Visual mode to select mode: type "^G"</li>
+		<li>Visual mode to insert mode: type "C" (non case-sensitive)</li>
+		<li>Visual mode to replace mode: type "R" or "gR"</li>
+		<li>Visual mode to command-line mode: type ":"</li>
+		<li>Visual mode to ex mode: type "Q"</li>
+		<li>Select mode to normal mode: type a non-printable command to move the 
+		cursor (without holding the shift key)</li>
+		<li>Select mode to visual mode: type "^O" or "^G"</li>
+		<li>Select mode to insert mode: type a printable character, which will 
+		insert the character and delete the selection</li>
+		<li>Select mode to replace mode: type "R" or "gR"</li>
+		<li>Select mode to command-line mode: type ":"</li>
+		<li>Select mode to ex mode: type "Q"</li>
+		<li>Insert mode to normal mode: type <Esc> twice</li>
+		<li>Insert mode to visual mode: type "^O" or "^G"</li>
+		<li>Insert mode to select mode: type "^G"</li>
+		<li>Insert mode to replace mode: type the <Insert> key</li>
+		<li>Insert mode to command-line mode: type ":"</li>
+		<li>Insert mode to ex mode: type "Q"</li>
+		<li>Replace mode to normal mode: type <Esc> twice</li>
+		<li>Replace mode to visual mode: type "^O" or "^G"</li>
+		<li>Replace mode to select mode: type "^G"</li>
+		<li>Replace mode to insert mode: type the <Insert> key</li>
+		<li>Replace mode to command-line mode: type ":"</li>
+		<li>Replace mode to ex mode: type "Q"</li>
+		<li>Command-line mode to normal mode: type "CTRL+M" or "CTRL+N" (which 
+		will execute the command) OR delete the entire line and then type 
+		"CTRL+H" OR type <Esc> twice (which will not execute the command)</li>
+		<li>Command-line mode to visual mode: type "^O" or "^G"</li>
+		<li>Command-line mode to select mode: type "^G"</li>
+		<li>Command-line mode to insert mode: type ":start"</li>
+		<li>Command-line mode to replace mode: type the <Insert> key</li>
+		<li>Command-line mode to ex mode: type "Q"</li>
+		<li>Ex mode to normal mode: type ":vi" or ":visual"</li>
+		<li>Ex mode to visual mode: type "^O" or "^G"</li>
+		<li>Ex mode to select mode: type "^G"</li>
+		<li>Ex mode to insert mode: type ":start"</li>
+		<li>Ex mode to replace mode: type the <Insert> key</li>
+		<li>Ex mode to command-line mode: type ":"</li>
+	</ol>
+</body>
+</html>

@@ -1,0 +1,18 @@
+
+		<h1> Intermediate </h1>
+		<h2> Advanced Search & Replace </h2>
+		
+		<p>Advanced search and replace methods can benefit both the avid coder and someone just writing notes.<br />
+		The <span class="command">:substitute</span> command searches for a text pattern, and replaces it with a text string.<br />
+		There are many more options, but these are the most practical:</p>
+		
+		<ul>
+			<li>Perhaps you'd like to search for each occurrence of 'foo' (in all lines), and replace it with 'bar'. Go into command mode and type: <span class="command">:s/foo/bar/g</span></li>
+			
+			<li>Or each occurrence of 'foo' (in the current line only), and replace it with 'bar'. Go into command mode and type: <span class="command">:%s/foo/bar/gc</span></li>
+			
+			<li>Not too sure about your decision? This will change each 'foo' to 'bar', but ask for confirmation first. Go into command mode and type: <span class="command">:%s/\&lt;foo\&gt;/bar/gc</span></li>
+			
+			<li>Change only whole words exactly matching 'foo' to 'bar'; ask for confirmation. Go into command mode and type: <span class="command">:%s/foo/bar/gci</span></li>
+			
+		</ul>

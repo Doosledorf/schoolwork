@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+	<head>
+		<meta charset = 'UTF-8'/>
+		<title>People</title>
+		<link href="../Assets/proj_style.css" rel="stylesheet" type="text/css">
+		<!--#include virtual="../Assets/media_queries.html"-->
+	</head>
+	
+	<body>
+		<div id = "main_wrap">
+			<!--#include virtual="../Assets/headerNav.html"-->
+			
+			<div class = "content_wrap">
+				
+				<a href="factions.shtml" class="button_panel">
+					<img class = "buttonImage" src = "../Assets/People/factions_button.jpg" alt ="Factions Link"/>
+				</a>
+				
+				<a href="major_players.shtml" class="button_panel">
+					<img class = "buttonImage" src = "../Assets/People/players_button.jpg" alt ="Players Link"/>
+				</a>
+				
+				<a href="native_races.shtml" class="button_panel">
+					<img class = "buttonImage" src = "../Assets/People/races_button.jpg" alt ="Races Link"/>
+				</a>
+			
+			</div>
+			
+			<!--#include virtual="../Assets/footer.html"-->
+		</div>
+	</body>
+</html>

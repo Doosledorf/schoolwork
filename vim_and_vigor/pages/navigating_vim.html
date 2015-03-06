@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en"> 
+ <head> 
+ 	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="style.css"/>
+	<title>Navigation</title>
+ </head>
+<body>
+	<h1>Basic Vim Navigation</h1>
+	<!--Some information referenced from http://vim.wikia.com/wiki/Tutorial, but 
+	not copied directly-->
+	<table>
+		<tr style="font-weight:bold;">
+			<td>Command/Key</td>
+			<td>Fuction</td>
+			<td>Notes</td>
+		</tr>
+		<tr>
+			<td>h</td>
+			<td>Move one space left</td>
+			<td>For movement, any number typed before the movement command will 
+			execute for x number of words. For example, typing 3e will move you 
+			to the end of the word that is three words over.</td>
+		</tr>
+		<tr>
+			<td>i</td>
+			<td>Move one space right</td>
+		</tr>
+		<tr>
+			<td>j</td>
+			<td>Move one space down</td>
+		</tr>
+		<tr>
+			<td>k</td>
+			<td>Moves one space up</td>
+		</tr>
+		<tr>
+			<td>e</td>
+			<td>Move to the end of a word</td>
+		</tr>
+		<tr>
+			<td>w</td>
+			<td>Move to the beginning of the next word</td>
+		</tr>
+		<tr>
+			<td>b</td>
+			<td>Move backward to the beginning of a word</td>
+		</tr>
+		<tr>
+			<td>$</td>
+			<td>Move to the end of a line</td>
+		</tr>
+		<tr>
+			<td>0</td>
+			<td>Move to the beginning of a line</td>
+		</tr>
+		<tr>
+			<td>gg</td>
+			<td>Move to the first line</td>
+		</tr>
+		<tr>
+			<td>G</td>
+			<td>Move to the last line</td>
+			<td>Typing a number before the command "G" will move you to the line 
+			that corresponds with that number. For example, typing 45G will move 
+			you to line 45.</td>
+		</tr>
+		<tr>
+			<td>)</td>
+			<td>Move forward one sentence</td>
+		</tr>
+		<tr>
+			<td>(</td>
+			<td>Move backward one sentence</td>
+		</tr>
+		<tr>
+			<td>}</td>
+			<td>Move forward one paragraph</td>
+		</tr>
+		<tr>
+			<td>{</td>
+			<td>Move backward one paragraph</td>
+		</tr>
+		<tr>
+			<td>H</td>
+			<td>Move to the top of the screen</td>
+		</tr>
+		<tr>
+			<td>M</td>
+			<td>Move to the middle of the screen</td>
+		</tr>
+		<tr>
+			<td>L</td>
+			<td>Move to the bottom of the screen</td>
+		</tr>
+		<tr>
+			<td><PGUP></td>
+			<td>Move one page up</td>
+			<td>Typing a number before a <PGUP> or <PGDN> command will move you 
+			that many pages up or down. For examples, typing 4<PGUP> will move 
+			you four pages up.</td>
+		</tr>
+		<tr>
+			<td><PGDN></td>
+			<td>Move one page down</td>
+		</tr>
+		<tr>
+			<td>''</td>
+			<td>Move to the line where the cursor was before the most recent 
+			jump</td>
+			<td>This is two single quotes, not one set of double quotes.</td>
+		</tr>
+		<tr>
+			<td>``</td>
+			<td>Move to the cursor position before the most recent jump</td>
+			<td>This is two back ticks, which can be found about the Tab key 
+			on most keyboard.</td>
+		<tr>
+			<td>%</td>
+			<td>Move to the corresponding item</td>
+			<td>For example, this would move you from an open bracket to its 
+			matching close bracket.</td>
+		</tr>
+		<tr>
+			<td>cw</td>
+			<td>Change word by deleting text and then entering insert mode</td>
+			<td>Type a number between the "c" and the "w", or between the "c" 
+			and the "b" (when changing a word backwards) will change that many 
+			words. For example, typing c2d will change two words.</td>
+		</tr>
+		<tr>
+			<td>cb</td>
+			<td>Change word backwards, similar to cw</td>
+		</tr>
+		<tr>
+			<td>dw</td>
+			<td>Delete word and stay in normal mode</td>
+			<td>The difference between cw and dw is that cw will delete the 
+			word(s) and then switch you to insert mode, while dw will delete 
+			the words(s) and keep you in normal mode.</td>
+		</tr>
+		<tr>
+			<td>u</td>
+			<td>Undo</td>
+			<td>Undo and redo will work multiple times rather than just once.</td>
+		</tr>
+		<tr>
+			<td>CTRL+r</td>
+			<td>Redo</td>
+		</tr>
+		<tr>
+			<td>:w</td>
+			<td>Save current file</td>
+		</tr>
+		<tr>
+			<td>:update</td>
+			<td>Save current file</td>
+			<td>The difference between :w and :update is that :w will save the 
+			file even if it has not been changed since the most recent save, 
+			while :update will only save the file if it has been changed since 
+			the most recent save.</td>
+		</tr>
+		<tr>
+			<td>:w!</td>
+			<td>Save current file and override any problems found by Vim when 
+			saving the file</td>
+		</tr>
+		<tr>
+			<td>:w "filename"</td>
+			<td>Save and name current file</td>
+			<td>This words interchangeably with :saveas "filename".</td>
+		</tr>
+		<tr>
+			<td>:q</td>
+			<td>Quit Vim</td>
+		</tr>
+		<tr>
+			<td>:wq</td>
+			<td>Save current file and then quit Vim</td>
+		</tr>
+		<tr>
+			<td>:q!</td>
+			<td>Quit Vim without saving any changes</td>
+		</tr>
+		<tr>
+			<td>:wa</td>
+			<td>Save all open and changed files</td>
+		</tr>
+		<tr>
+			<td>:xa</td>
+			<td>Save all open and changed files and quit Vim</td>
+		</tr>
+		<tr>
+			<td>:qa</td>
+			<td>Close all open files and quit Vim unless there are unsaved changes</td>
+		</tr>
+		<tr>
+			<td>:qa!</td>
+			<td>Close all open files and quit Vim regardless of any unsaved changes</td>
+		</tr>
+		<tr>
+			<td>f</td>
+			<td>Move to the next specified character in the same line</td>
+			<td>You must type a character after "f" (or after a F, t, T, ct, cf, 
+			dt, or df command). For example, typing fg will move you to the next 
+			g on the same line.</td>
+		</tr>
+		<tr>
+			<td>F</td>
+			<td>Move to the previous specified character in the same line</td>
+			<td>Like above, you must type a character after "F".</td>
+		</tr>
+		<tr>
+			<td>t</td>
+			<td>Move to just before the next specified character in the same 
+			line</td>
+		</tr>
+		<tr>
+			<td>T</td>
+			<td>Move to just after the next specified character in the same line</td>
+		</tr>
+		<tr>
+			<td>ct</td>
+			<td>Change all text until the next specified character in the 
+			same line</td>
+			<td>The ct and cf commands will both leave you in insert mode 
+			until you choose to return to normal mode.</td>
+		</tr>
+		<tr>
+			<td>cf</td>
+			<td>Change all text until the next specified character in the 
+			same line, including the specified character</td>
+		</tr>
+		<tr>
+			<td>dt</td>
+			<td>Delete all text until the next specified character in the same 
+			line</td>
+		</tr>
+		<tr>
+			<td>df</td>
+			<td>Delete all text until the next specified character in the same 
+			line, including the specified character</td>
+		</tr>
+	</table>
+</body>
+</html>

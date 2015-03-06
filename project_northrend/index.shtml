@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang = 'en'>
+	<head>
+		<meta charset = 'UTF-8'/>
+		<title>Northrend Home</title>
+		<link href="Assets/proj_style.css" rel="stylesheet" type="text/css">
+		<!--#include virtual="Assets/media_queries.html"-->
+	</head>
+	
+	<body>
+		<div id = "main_wrap">
+			<!--#include virtual="Assets/headerNav.html"-->
+			<div class = "content_wrap">
+				<div class = "info_panel">
+					
+					<img class = "mapImage" src = "unexploredNorthrend.jpg" alt ="Undetailed map of Northrend"/>
+					<h1>Welcome to Northrend</h1>
+					<p>		Greetings, I present to you Northrend AKA the "Crown of Azeroth." </p>
+					<p>		As it exists in Warcraft lore, I have chosen it as one of my favorite place, mainly because
+							its story surrounds one guy, the Lich King AKA Arthas Menethil. As you will find out, he is one of those tragic-hero types and I'm a sucker for the tragic-hero archetype. Besides that, Northrend 
+							just oozes flavor. Every zone is immersive, but they all have this air of majesty about them. There is so much deeply rooted history. Whether its from Sargeras' battle in The Storm Peaks
+							or Galakrond's skeleton in Dragonblight, you can't help but feel part of it. And when you storm Icecrown Citadel...its just a rush.</p>
+					<p>		Lets get on with the show.</p>
+					
+				</div>
+			</div>
+			
+			<!--#include virtual="Assets/footer.html"-->
+		</div>
+	</body>
+</html>

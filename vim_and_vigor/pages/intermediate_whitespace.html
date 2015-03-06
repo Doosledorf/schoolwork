@@ -1,0 +1,16 @@
+
+		<h1> Intermediate </h1>
+		<h2> Whitespace </h2>
+		
+		<p>Whitespace is usually helpful for readability. In some cases, it can be a nuisance. Use these methods to rid of some of your superfluous whitespace.</p>
+		
+		<ul>
+			<li>In a search, <span class="command">\s</span> finds whitespace (a space or a tab), and <span class="command">\+</span> finds one or more occurrences.</li>
+			
+			<li>Delete all trailing whitespace (at the end of each line) with: use command <span class="command">:%s/\s\+$//</span></li>
+			
+			<li>More rarely, a user might want to delete (leading) whitespace at the beginning of each line: use command <span class="command">:%s/^\s\+</span></li>
+			
+			<li>One way to make sure to remove all trailing whitespace in a file is to set an autocmd in your .vimrc file. Every time the user issues a :w command, Vim will automatically remove all trailing whitespace before saving. <span class="command">autocmd BufWritePre * :%s/\s\+$//e</span> <br /> However, this is a very dangerous autocmd to have as it will always strip trailing whitespace from every file a user saves. Sometimes, trailing whitespace is desired, or even essential in a file so be careful when implementing this autocmd. We even urge against it. This is only to have you aware of the option.</li>
+			
+		</ul>

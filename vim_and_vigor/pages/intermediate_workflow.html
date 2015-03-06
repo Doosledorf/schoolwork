@@ -1,0 +1,25 @@
+
+		<h1> Intermediate </h1>
+		<h2> Workflow </h2>
+		
+		<p>Workflow, or the space in which you'll be your typing or coding, lets you add to or remove from your work environment as you see fit. Vim adapts to you as a user, providing options that may prove more efficient in your work. This includes auto-indentation, adding line numbers, spell check, changing directories, and tabs.</p>
+		
+		<h3>Auto-indentation:</h3>
+		<p>Go into command mode and enter <span class="command">:set autoindent</span>. For alignment and making your text or code readable and accessible.</p>
+				
+		<h3>Adding line numbers:</h3>
+		<p>Go into command mode and enter <span class="command">:set nu</span>. This will make book-keeping much simpler.</p>
+				
+		<h3>Spell check:</h3>
+		<p>Go into command mode and enter <span class="command">:set spell spelllang=en_us</span>. To use spell check, after entering text, hover the cursor over the misspelled word. Go back into command mode and enter <span class="command">z=</span>.</p>
+				
+		<h3>Change working directory:</h3>
+		<p>By default netrw shows a listing of files and directories. You can open these files by using the movement keys, then pressing enter. This opens the file in a new buffer.</p>
+		<p>A buffer is analogous to an open file. You can see a list of buffers by issuing <span class="command">:ls</span>, or <span class="command">:buffers</span>. If you want to switch to another buffer, you may issue the command <span class="command">:buffer &lt;number&gt;</span>, replacing the buffer number with the file you wish to view.</p>
+				
+		<h3>Vim tab support:</h3>
+		<p>Vim also offers support for tabs, with each tab mapping to a buffer. A file can be opened in a tab from netrw by pressing t, or by typing <span class="command">:tab &lt;filename&gt;</span>. Tabs can be cycled through with the <span class="command">:tabprev</span> and <span class="command">:tabnext</span> commands.</p>
+				
+		<h3>Searching:</h3>
+		<p>Searching in Vim can be done inside of a file or in a given directory (such as the root of your project). The easier of the search types is searching within a single file. You can search at any time by pressing the / key, followed by your search term. When you press enter, the caret will jump to the first match. You can cycle through the matches by pressing n for next, or N for previous.</p>
+		<p>Note: There are additional options to do incremental search, and highlight matching results. To search across multiple files, Vim includes a built in grep tool. You can invoke this tool by typing this while in command mode: <span class="command">:vimgrep /pattern/g **/.*</span>. This will search for the regular expression pattern recursively and globally. This takes search terms, or regular expressions, and supports many of the regex flags. To view the list of matches, you can open the quickfix window by issuing the command <span class="command">:cw</span>. The results will be listed, and can be opened in the list window by pressing enter when focusing on the file.</p>

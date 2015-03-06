@@ -1,0 +1,60 @@
+	<h1>Introduction to Modes</h1>
+	<a name="basicModes"></a>
+	<h2>Basic Modes</h2>
+	<p>Vim has six basic modes:</p>
+	<h3>Normal mode</h3>
+	<p> Here you can enter normal editor commands. When you 
+		start Vim, you are in normal mode. Normal mode is also known as 
+		command mode. There are many different ways to reach normal mode. To 
+		access normal mode from visual mode, type [Esc]+v, v, or [CTRL]+V. 
+		From select mode, type any non-printable command to move the cursor 
+		(without holding the shift key). From insert mode and replace mode, 
+		type <Esc> twice. From command-line mode, type "CTRL+M" or "CTRL+N" 
+		(which will execute the command) OR delete the entire line and then 
+		type "CTRL+H" OR type <Esc> twice (which will not execute the command). 
+		From ex mode, type ":vi" or ":visual". When in doubt, if you want 
+		to return to normal mode from ANY mode, you can always type <Esc> 
+		twice. The only exception to this is ex mode. When returning to 
+		normal mode, you will see a screen flash or hear a bell to let you 
+		know you have succeeded.</p>
+
+		<h3>Visual mode</h3><p>This is like normal mode, but all of your movement 
+		commands will extend a highlighted area. Non-movement commands will 
+		be executed for the highlighted area as well. To access visual from 
+		normal mode, just type "V" (non case-sensitive) or "^V". From all 
+		other modes, type "^O" or "^G". </p>
+		<h3>Select mode</h3><p>This mode looks similar to the MS-Windows selection 
+		mode. If you type a printable character, the selection is deleted 
+		and insert mode will begin. To access select mode from normal mode, 
+		select text with the mouse while the 'selectmode' option contains 
+		'mouse' OR hold the shift key and use a non-printable command to 
+		move the cursor while the 'selectmode' option contains 'key'. From 
+		all other modes, type "^G".</p>
+		<h3>Insert mode</h3><p>Here, all the text you type is inserted in to the 
+		buffer. To access insert mode from normal mode, type type "I", "A", 
+		"O", "C", or "S" (non case-sensitive). From visual mode, type "C" 
+		(non case-sensitive). From select mode, type a printable character, 
+		which will insert the character and delete the selection. From 
+		replace mode, type the <Insert> key. From command-line mode and ex 
+		mode, type ":start". </p>
+		<h3>Command-line mode</h3><p>This mode is more Ex commands (:), search 
+		commands (? and /), and the filter command (!). Here you can enter 
+		one line of text at the bottom of the window. To access command-line 
+		mode from normal mode, type ":", "/", "?", or "!". From all other 
+		modes, type ":".</p>
+		<h3>Ex mode:</h3><p>Here you can also edit the command line, as in 
+		command-line mode, but this is very limited. To access ex mode, 
+		simply type ":Q". This will work no matter what mode you're in.</p>
+	<a name="otherModes"></a>
+	<h2>Other Modes:</h2>
+		<h3>Operator-pending mode</h3><p>This is like normal mode, except while Vim 
+		waits for specification on the type of text on which the operator will 
+		work after an operator command has started.</p>
+		<h3>Replace mode:</h3><p>This is the same as insert mode except an existing 
+		character of the text is deleted for every character you enter.</p>
+		<h3>Virtual replace mode</h3><p>This is like replace mode, but you are 
+		replacing screen space instead of characters.</p>
+		<h3>Insert normal mode</h3><p>This mode acts like normal mode and returns 
+		you to insert mode after a single command is executed.</p>
+		<h3>Insert select mode</h3><p>This mode is entered when you start select mode 
+		from insert mode. You return to insert mode when select mode ends.</p>
