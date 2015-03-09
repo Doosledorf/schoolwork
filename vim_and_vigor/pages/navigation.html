@@ -1,0 +1,37 @@
+<h1>Basic Vim Navigation</h1>
+<!--Some information referenced from http://vim.wikia.com/wiki/Tutorial, but 
+not copied directly-->
+<p>Navigating Vim may seem daunting at first, but once you're through the learning 
+curve, it's very easy and efficient. Let's start with some basic navigation 
+commands.</p> 
+<h3>Moving Spaces</h3>
+<p>Typing h, i, j, and k (case-sensitive) will move you one space left, right, 
+down, and up, respectively. For each of those, you can type a number in front 
+of the command to specify how many spaces you'd like to move in that given 
+direction. For example, typing 3i will move you three spaces to the right.</p>
+<h3>Moving to the Beginning or End of a Word</h3>
+<p>Typing e will move you to the end of a word, and w will move you to the 
+beginning of the next word. Typing b will move you backwards to the beginning of 
+a word.</p>
+<h3>Moving to Lines</h3>
+<p>To move to the end of a line, type $, and to move to the beginning of a line, 
+type 0. Typing gg will move you to the first line, and typing G will move you to 
+the last line. If you'd like to move to a certain line number, type the line 
+number before G to specify that is the corresponding line number to which you 
+would like to move. For example, if you type 45G, you will move to line 45.</p>
+<h3>Saving</h3>
+<p>To save the current file, type :w. An alternative to this would be to type 
+:update. The difference is that :w will save the file even if it has not been 
+changed since the most recent save, while :update will only save the file if 
+it has been changed since the most recent save. Typing :w! will additionally 
+override any problems found by Vim while saving the file. To save all open 
+and changed files, type :wa. If you want to name the file and save it at the 
+same time, type :w "filename". This is the equivalent to the "Save As" option 
+found in other programs, and appropriately works interchangeably with typing 
+:saveas "filename".</p>
+<h3>Quitting</h3>
+<p>To quit Vim, type :q. If you'd like to quit and also save the current file 
+at the same time, type :wq. To quit and save all open and changed files, type 
+:xa. Similarly, typing :qa will close all open files and quit Vim unless there 
+are unsaved changes. Typing :q! will quit Vim without saving any changes (be 
+careful when using this command).</p>

@@ -1,0 +1,98 @@
+<h1>Regular Expressions</h1>
+
+<h2>Meta-characters</h2>
+<p>The intermediate tutorial covered the construction of pattern strings using 
+<strong>literal</strong>characters. Here, you will be using <strong>meta-characters</strong>
+ - characters, preceded with a backslash, that have special meanings inside patterns.</p>
+<p>Below are of some of the most frequently used meta-characters in VIM:</p>
+<table>
+	<tr>
+		<td>\s whitespace character</td>
+		<td>\S non-whitespace character</td>
+	</tr>
+	<tr>
+		<td>\d digit</td>
+		<td>\D non-digit</td>
+	</tr>
+	<tr>
+		<td>\w word character</td>
+		<td>\W non-word character</td>
+	</tr>
+		<tr>
+		<td>\a alphabetic character</td>
+		<td>\A non-alphabetic character</td>
+	</tr>
+	<tr>
+		<td>\u uppercase character</td>
+		<td>\U non-uppercase character</td>
+	</tr>
+</table>
+
+<p>For example, to match a date such as 12/2/2014 you can use: \d\d/\d\d/\d\d\d\d</p>
+
+<p>To match a 5 letter word starting with an uppercase letter, use: \u\w\w\w\ 
+However, if you do not know how many characters are in a word, you can use 
+<strong>quantifiers</strong>.</p>
+
+
+
+<h2>Quantifiers</h2>
+<p>Quantifiers allow you to set how many times a certain part of your pattern 
+should be repeated.</p>
+<table>
+	<tr>
+		<th>Quantifier</td>
+		<th>Description</th>
+	</tr>
+	<tr>
+		<td>*</td>
+		<td>matches 0 or more of the preceding characters, ranges or metacharacters .* 
+		matches everything including empty line</td>
+	</tr>
+	<tr>
+		<td>\+</td>
+		<td>matches 1 or more of the preceding characters</td>
+	</tr>
+	<tr>
+		<td>\=</td>
+		<td>matches 0 or 1 more of the preceding characters</td>
+	<tr>
+		<td>\{n}</td>
+		<td>matches exactly n times of the preceding characters</td>
+	</tr>
+</table>
+
+
+
+<h2>Character ranges</h2>
+<p>Now, you will be introduced to some typical character ranges.</p>
+<p>The expressions, [012345] and [0 – 5] will match any of the numbers 
+in the range enclosed in the square brackets. </p>
+<p>Note that the range represents just one character in the search pattern. 
+Therefore, [0123] and 0123 do not yield the same results. </p>
+<p>The order is not important when using the square braces. For example, [3210] and [0123] might be ordered 
+differently but are the same character ranges. However, 0123 and 3210 are very different.</p>
+
+<!-- PUT A BORDER AROUND ENTIRE EXAMPLE -->
+<div class = "regexExample">
+	<p>EXAMPLE</p>
+	<p>Note the differences in the following texts while using the expression, s:[65]:Dig:g</p>
+	<p>Before:</p>
+	<p><em>High <strong>65</strong> to 70. Southeast wind around 10</em></p>
+	<p>After:</p>
+	<p><em>High <strong>DigDig</strong> to 70. Southeast wind around 10</em></p>
+	<br/><br/>
+	
+	<p>However, this is what happens when s:65:Dig:g is used to match the same text.</p>
+	<p>Before:</p>
+	<p><em>High <strong>65</strong> to 70. Southeast wind around 10</em></p>
+	<p>After:</p>
+	<p><em>High <strong>Dig</strong> to 70. Southeast wind around 10</em></p>
+</div>
+<!-- END OF EXAMPLE -->
+<p>(Example taken directly from <a href="http://www.vimregex.com">VimRegex</a>)</p>
+
+<p>Character ranges can be particularly useful when you want to run a grammar check. 
+ You can achieve this by:  \.\s\+[a-z]</p>
+<p>This looks for a period followed by one or more blank spaces as well as a lower case word as indicated
+ by the [a-z] range.</p>

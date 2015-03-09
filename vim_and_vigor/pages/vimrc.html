@@ -1,0 +1,51 @@
+<h1>Vimrc</h1>
+
+<p>The vimrc file is a file that contains any runtime configuration settings that 
+you want to initialize upon starting Vim. Essentially, you can customize Vim with 
+the commands you choose to put in your vimrc file. If you have a Unix-based system, 
+the file is called .vimrc, whereas it is called _vimrc on a Windows system.</p>
+<p>When creating your vimrc file, it's important that you thoroughly understand 
+all the content, rather than just copying customization you find online and pasting 
+it into the file. To keep track of what every line in your file does, be sure to 
+add comments where you feel necessary by typing double quotes (") followed by the 
+comment.</p>
+<h3>Tabs</h3>
+<p>You can specify how many spaces you'd like your tabs to represent. To specify 
+how many spaces are shown for a <Tab>, use the command "set tabstop". For example, 
+"set tabstop=5" would make every tab you see five spaces long. When editing (how 
+many spaces you'd like a tab to be when you personally press the <Tab> key), the 
+command is "set softtabstop". The command "set expandtab" converts all tabs to 
+spaces. Therefore, if you have set the spaces per <Tab> to five, it will merely 
+mean that you are inserting five spaces.</p>
+<h3>Movement Bindings</h3>
+<p>You may notice some movement issues with Vim. For example, if you have a line 
+of code that's so long it's wrapped into two lines, up and down commands (j and k) 
+will move you to the next "real" line, rather than the next visual line (the 
+wrapped line). If you like to change this, you can type the commands "nnoremap 
+j gj" and "nnoremap k gk". Other movement bindings can be done similarly.</p>
+<h3>UI Config</h3>
+<p>There are many ways to customize the visual aspects of Vim. This can become 
+very helpful while coding. For instance, if you'd like to show line numbers, 
+simply type "set number". The command "set showcmd" will show the previously 
+typed command in the bottom bar. "set cursorline" is especially helpful when 
+working on multiple files at the same time; it will highlight or underline 
+the line where your cursor left off. The command "set showmatch" will highlight 
+the corresponding parenthesis, bracket, or brace when your cursor moves over the 
+character.</p>
+<h3>Launch Config</h3>
+<p>For a one-time configuration of plugins, you can use the commands "call 
+pathogen#infect()" and "call pathogen#runtime_append_all_bundles" to extract 
+your Vim plugins from their location in your ~/.vim/bundles directory under Vim 
+up to the ~/.vim folder.</p>
+<h3>Backups</h3>
+<p>Vim automatically creates a backup file when you leave a Vim file open after 
+changing it. The backup file has the same name as the original file with a "~"
+appended to it. To avoid confusion with the files, you can move the backup file 
+to another folder with commands "set backupdir=~/.vim-tmp,~.tmp,~/tmp,/var/tmp,/tmp", 
+"set backupskip=/tmp/*,/private/tmp*", and "set directory=~/.vim-tmp,~/tmp,/var/tmp,/tmp". 
+Additionally, the commands "set backup" and "set writebackup" enable backup 
+support.</p>
+<h3>Color Schemes</h3>
+<p>There are many color schemes available for Vim. Firstoff, the command "syntax enable" 
+enables syntax processing. Once you have chosen a color scheme for your customized 
+Vim, simply type "colorscheme" followed by the specific name of the color scheme.</p>

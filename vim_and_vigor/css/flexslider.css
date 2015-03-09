@@ -95,5 +95,19 @@ html[xmlns] .slides {display: block;}
   .flex-direction-nav .flex-next { opacity: 1; right: 10px;}
 }
 
+.slider{}
 
+.slide_arrows{}
+
+.slide_text{
+    background-color:   #151a1e;
+    bottom:             0;
+    color:              #dbd1b7;
+    display:            block;
+    opacity:            0.9;
+    left:               0;
+    padding:            1%;
+    position:           absolute;
+    width:              100%;
+}
 

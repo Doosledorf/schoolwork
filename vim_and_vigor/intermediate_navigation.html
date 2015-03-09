@@ -1,0 +1,53 @@
+<h1>Intermediate Vim Navigation</h1>
+
+<p>Now that we know some basic Vim navigation, it's time to learn some more 
+advanced commands.</p>
+<h3>Moving by Sentence and Paragraph</h3>
+<p>To move forward one sentence, type ), and to move backward one sentence, 
+type (. To move forward one paragraph, type }, and to move backward one 
+paragraph, type {.</p>
+<h3>Moving on the Screen</h3>
+<p>To move to the top, middle, or bottom of the screen, type H, M, or L, 
+respectively. All of these are case-sensitive, so make sure it's 
+uppercase.</p>
+<h3>Moving to Specified Characters on a Line</h3>
+<p>For all of the following commands, you must type a character 
+immediately after the command. To move to the next specified character in 
+the same line, type f. For example, to move to the next "m" in the same 
+line, type fm. Likewise, to move to the previous specified character in 
+the same line, type F. Obviously, these commands are both case-sensitive. 
+The commands t and T work just like f and F, except that they move you to 
+just before the next or previous specified character in the same line.<p>
+<h3>More Movement</h3>
+<p>To move one page up or one page down, press the <PGUP> or <PGDN> key, 
+respectively. Typing two single quotes, as in '', will move you to the 
+line where the cursor was before the most recent move. This will not 
+work if you type one set of double quotes. Typing two back ticks, as in 
+``, will move you to the position where the cursor was before the most 
+recent move. The back tick key is located over the tab key on most 
+keyboards. Typing % will move you to a corresponding item. For instance, 
+if you are at an open bracket and would like to move to its corresponding 
+closed bracket, typing % will bring you there.</p>
+<h3>Changing and Deleting Words</h3>
+<p>The cw command will change a word by deleting the text and then 
+entering insert mode. The cb command works similarly, except that it 
+changes the word backwards. For either of these, typing a number 
+after the c will change that many words. For example, the command to 
+change two words would be c2w. To delete a word, type dw. This is 
+essentially the same as the cw command; the only difference is that 
+cw will switch you to insert mode after deleting the text, while dw 
+will keep you in normal mode after the command has been executed.</p>
+<h3>Changing and Deleting Text until A Specified Character</p>
+<p>Similar to when moving to specific characters in the same line, the 
+following commands require you to type a character immediately after 
+the command. Typing ct will change (delete) all text in the line until 
+the next specified character in that line. For example, typing ctp will 
+delete all the text in that line until the next p. Typing cf executes a 
+similar action, except that the deleted text inclues the specified 
+character. Additionally, like the cw and cb commands, the ct and cf 
+commands will switch you to insert mode until you choose to return to 
+normal mode. If you wish to delete text and stay in normal mode, dt 
+and df will act similarly to ct and cf, respectively.</p>
+<h3>Undo and Redo</h3>
+<p>To undo, type u, and to redo, type CTRL plus r. Undo and redo will 
+both work multiple times rather than just once.</p>

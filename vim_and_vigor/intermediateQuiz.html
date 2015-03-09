@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+	<meta charset='utf-8'/>
+	<title>Intermediate Quiz</title>
+	<style>	
+			form{
+				width: 1000px;
+				margin: 0 auto;
+				padding-left: 10px;
+				font-family: Comic Sans MS;
+				}
+	
+			#submit-btn{
+						cursor: pointer;
+						}
+			#numWrong{
+					  color: red;
+					  font-weight: bold;
+					  }
+	</style>
+	<script>
+	</script>
+</head>
+
+<body>
+	<form id="intermediateQuiz"
+		  method="post"
+		  action="intermediateQuiz.html"
+		  onsubmit="">
+		  
+		<h2>Intermediate Quiz</h2>
+		
+		<p class="question">1. True or False. The ":set indent" command allows you to turn on automatic indentation</p>        
+		<ul class="answers">            
+		<input type="radio" name="q1" value="a" id="q1a"><label for="q1a">True</label><br/>          
+		<input type="radio" name="q1" value="b" id="q1b"><label for="q1b">False</label><br/>                   
+		</ul>        
+		<!-- Answer: B -->
+		
+		<p class="question">2. Which of the following would allow you replace the ALL occurrences of the word “string” 
+		with “integer” throughout your current file?</p>        
+		<ul class="answers">            
+		<input type="radio" name="q2" value="a" id="q2a"><label for="q2a">:%s/string/integer/g</label><br/>          
+		<input type="radio" name="q2" value="b" id="q2b"><label for="q2b">:%s/\<STRING\>/INTEGER/gc</label><br/>
+		<input type="radio" name="q2" value="a" id="q2c"><label for="q2c">:s/integer/string/gc</label><br/>          
+		<input type="radio" name="q2" value="b" id="q2d"><label for="q2d">:subsitiute/%string%/replace</label><br/> 		
+		</ul>
+		<!-- Answer: A -->
+		
+		<p class="question">3. What command adds x line numbers to the left of the cursor?</p>        
+		<ul class="answers">            
+		<input type="radio" name="q3" value="a" id="q3a"><label for="q3a">:setlines x</label><br/>          
+		<input type="radio" name="q3" value="b" id="q3b"><label for="q3b">:setnumber x</label><br/>            
+		<input type="radio" name="q3" value="c" id="q3c"><label for="q3c">:set nu x</label><br/>            
+		<input type="radio" name="q3" value="d" id="q3d"><label for="q3d">:set <x></label><br/> 
+		</ul>
+		<!-- Answer: C -->
+		
+		<p class="question">4. What does the :buffer command do? </p>        
+		<ul class="answers">            
+		<input type="radio" name="q4" value="a" id="q4a"><label for="q4a">Shows contents of your buffer directory.</label><br/>          
+		<input type="radio" name="q4" value="b" id="q4b"><label for="q4b">Pushes your file text to an output buffer.</label><br/>            
+		<input type="radio" name="q4" value="c" id="q4c"><label for="q4c">Switches to buffer mode.</label><br/>            
+		<input type="radio" name="q4" value="d" id="q4d"><label for="q4d">Shows a list of buffers.</label><br/>
+		</ul>
+		<!-- Answer: D -->
+		
+		
+		<p class="question">5. How do you open a new tab in normal mode?</p>        
+		<ul class="answers">            
+		<input type="radio" name="q5" value="a" id="q5a"><label for="q5a">:tabnew</label><br/>          
+		<input type="radio" name="q5" value="b" id="q5b"><label for="q5b">:newtab</label><br/>            
+		<input type="radio" name="q5" value="c" id="q5c"><label for="q5c">:opentab</label><br/>            
+		<input type="radio" name="q5" value="d" id="q5d"><label for="q5d">:tab</label><br/>
+		</ul>
+		<!-- Answer: A -->
+		
+		
+		<input  name="submit-btn"
+				type="submit"
+				id="submit-btn"
+				value="Submit Answers"/>	
+		
+	</form>
+</body>
+
+</html>
