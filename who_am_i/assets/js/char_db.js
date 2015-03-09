@@ -1,4 +1,4 @@
-var wardrobe = { 
+var wardrobe =  { 
                  'Azazel': { imageFilePath : '#',
                              stats : { hearts : { heartType : 'black', heartCount : 3 },
                                        pickup : [ '0 - The Fool' ],
