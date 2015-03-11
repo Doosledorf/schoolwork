@@ -1,10 +1,10 @@
 var wardrobe =  { 
-                 'Azazel': { imageFilePath : '#',
+                 'Azazel': { imageFilePath : '../images/char_images/Azazel.jpg',
                              stats : { hearts : { heartType : 'black', heartCount : 3 },
                                        pickup : [ '0 - The Fool' ],
                                        items : { 
-                                                 'Short Ranged Brimstone' : { imageFilePath : '#', itemDescription : 'A very powerful blood beam. Release the fire button when fully charged.' },
-                                                 'Faux Lord of the Pit' : { imageFilePath : '#', itemDescriptiom : 'Grants flight.' }
+                                                 'Short Ranged Brimstone' : { imageFilePath : '../images/item_images/brimstone.jpg', itemDescription : 'A very powerful blood beam. Release the fire button when fully charged.' },
+                                                 'Faux Lord of the Pit' : { imageFilePath : '../images/item_images/lordOfThePit.jpg', itemDescriptiom : 'Grants flight.' }
                                                },
                                        speed : 2,
                                        range : 1,
@@ -18,10 +18,10 @@ var wardrobe =  {
                              score : 0
                            },
                 
-                 'Issac (w/D6)': { imageFilePath : '#',
+                 'Issac (w/D6)': { imageFilePath : '../images/char_images/Issac.jpg',
                                    stats : { hearts : { heartType : 'red', heartCount : 3 },
                                              pickup : [ '1x Bomb' ],
-                                             items : { 'D6' : { imageFilePath : '#', itemDescription : 'Lets you reroll any pedestal item. 6x room charge.' } },
+                                             items : { 'D6' : { imageFilePath : '../images/item_images/random_D6.jpg', itemDescription : 'Lets you reroll any pedestal item. 6x room charge.' } },
                                              speed : 2, 
                                              range : 2,
                                              tears : 1, 
@@ -34,7 +34,7 @@ var wardrobe =  {
                                    score : 0
                                  }, 
     
-                 'Issac': { imageFilePath : '#',
+                 'Issac': { imageFilePath : '../images/char_images/Issac.jpg',
                                    stats : { hearts : { heartType : 'red', heartCount : 3 },
                                              pickup : [ '1x Bomb' ],
                                              items : { 'None' : { imageFilePath : '#', itemDescription : 'N/A' } },
@@ -50,10 +50,10 @@ var wardrobe =  {
                                    score : 0
                                  },
     
-                 'Magdalene' : { imageFilePath : '#', 
+                 'Magdalene' : { imageFilePath : '../images/char_images/Magdalene.jpg', 
                                  stats : { hearts : { heartType : 'red', heartCount : 4}, 
                                            pickup : [ 'None' ],
-                                           items : { 'Yum Heart' : { imageFilePath : '#', itemDescription : 'Heals for one heart. 4x room charge.' } },
+                                           items : { 'Yum Heart' : { imageFilePath : '../images/item_images/yumHeart.jpg', itemDescription : 'Heals for one heart. 4x room charge.' } },
                                            speed : 1, 
                                            range : 2, 
                                            tears : 1, 
@@ -66,10 +66,10 @@ var wardrobe =  {
                                  score : 0
                                },
     
-                 'Cain' : { imageFilePath : '#', 
+                 'Cain' : { imageFilePath : '../images/char_images/Cain.jpg', 
                             stats : { hearts : { heartType : 'red', heartCount : 2 },
                                       pickup : [ '1x Key' ],
-                                      items : { 'Lucky Foot' : { imageFilePath : '#', itemDescription : '+1 Luck. Increases chances of winning at Shell Game Beggar and Fortune Teller.' } },
+                                      items : { 'Lucky Foot' : { imageFilePath : '../images/item_images/luckyFoot.jpg', itemDescription : '+1 Luck. Increases chances of winning at Shell Game Beggar and Fortune Teller.' } },
                                       speed : 2,
                                       range : 1,
                                       tears : 1, 
@@ -82,10 +82,10 @@ var wardrobe =  {
                             score : 0
                           }, 
     
-                 'Judas' : { imageFilePath : '#',
+                 'Judas' : { imageFilePath : '../images/char_images/Judas.jpg',
                              stats : { hearts : { heartType : 'red', heartCount : 1 },
                                        pickup : [ '3x Coins' ], 
-                                       items : { 'Book of Belial' : { imageFilePath : '#', itemDescription : '+2 Damage for the duration of the room. An additional 50% if holding Blood of the Matyr. Guarantees a devil/angel room if killing a boss holding it.' } },
+                                       items : { 'Book of Belial' : { imageFilePath : '../images/item_images/bookOfBelial.jpg', itemDescription : '+2 Damage for the duration of the room. An additional 50% if holding Blood of the Matyr. Guarantees a devil/angel room if killing a boss holding it.' } },
                                        speed : 2,
                                        range : 2, 
                                        tears : 1, 
@@ -98,10 +98,10 @@ var wardrobe =  {
                              score : 0
                            },
     
-                 '???' : { imageFilePath : '#', 
+                 '???' : { imageFilePath : '../images/char_images/BlueBaby.jpg', 
                            stats : { hearts : { heartType : 'blue', heartCount : 3 }, 
                                      pickup : [ 'None' ],
-                                     items : { 'Poop' : { imageFilePath : '#', itemDescription : 'You poop.' } },
+                                     items : { 'Poop' : { imageFilePath : '../images/item_images/thePoop.jpg', itemDescription : 'You poop.' } },
                                      speed : 2,
                                      range : 2, 
                                      tears : 1, 
@@ -114,12 +114,12 @@ var wardrobe =  {
                            score : 0
                          }, 
     
-                 'Eve' : { imageFilePath : '#', 
+                 'Eve' : { imageFilePath : '../images/char_images/Eve.jpg', 
                            stats : { hearts : { heartType : 'red', heartCount : 2 }, 
                                      pickup : [ 'None' ],
                                      items : {
-                                                'Dead Bird' : { imageFilePath : '#', itemDescription : 'When hit, abird appears to attack nearby enemies for the duration of the room.' }, 
-                                                'Whore of Babylon' : { imageFilePath : '#', itemDescription : 'In the case of Eve, being reduced to one red heart or less gives you increased damage and speed.'}
+                                                'Dead Bird' : { imageFilePath : '../images/item_images/deadBird.jpg', itemDescription : 'When hit, abird appears to attack nearby enemies for the duration of the room.' }, 
+                                                'Whore of Babylon' : { imageFilePath : '../images/item_images/whoreOfBabylon.jpg', itemDescription : 'In the case of Eve, being reduced to one red heart or less gives you increased damage and speed.'}
                                              },
                                      speed : 2,
                                      range : 2, 
@@ -133,10 +133,10 @@ var wardrobe =  {
                            score : 0
                          }, 
     
-                 'Samson' : { imageFilePath : '#', 
+                 'Samson' : { imageFilePath : '../images/char_images/Samson.jpg', 
                            stats : { hearts : { heartType : 'red', heartCount : 3 }, 
                                      pickup : [ 'None' ],
-                                     items : { 'Bloody Lust' : { imageFilePath : '#', itemDescription : 'Killing enemies and taking damage permenantly increase your damage for the duration of the floor.' } },
+                                     items : { 'Bloody Lust' : { imageFilePath : '../images/item_images/bloodyLust.jpg', itemDescription : 'Killing enemies and taking damage permenantly increase your damage for the duration of the floor.' } },
                                      speed : 2,
                                      range : 4, 
                                      tears : 1, 
@@ -149,10 +149,10 @@ var wardrobe =  {
                            score : 0
                          }, 
                 
-                 'Lazarus' : { imageFilePath : '#', 
+                 'Lazarus' : { imageFilePath : '../images/char_images/Lazarus.jpg', 
                            stats : { hearts : { heartType : 'red', heartCount : 3 }, 
                                      pickup : [ '1x Pill' ],
-                                     items : { 'Lazarus\'s Rags' : { imageFilePath : '#', itemDescription : 'Upon death, the character respawns immediately as \'Revived Lazarus\'. This effect lasts for the duration of the run.' } },
+                                     items : { 'Lazarus\'s Rags' : { imageFilePath : '../images/item_images/lazarusRags.jpg', itemDescription : 'Upon death, the character respawns immediately as \'Revived Lazarus\'. This effect lasts for the duration of the run.' } },
                                      speed : 2,
                                      range : 1, 
                                      tears : 1, 
@@ -165,12 +165,12 @@ var wardrobe =  {
                            score : 0
                          },
     
-                'Eden' : { imageFilePath : '#', 
+                'Eden' : { imageFilePath : '../images/char_images/Eden.jpg', 
                            stats : { hearts : { heartType : 'Varies', heartCount : 'Varies' }, 
                                      pickup : [ 'Varies' ],
                                      items : { 
-                                                'Random Item 1' : { imageFilePath : '#', itemDescription : 'Depends on the Item' },
-                                                'Random Item 2' : { imageFilePath : '#', itemDescription : 'Depends on the Item' }
+                                                'Random Item 1' : { imageFilePath : '../images/item_images/random_D6.jpg', itemDescription : 'Depends on the Item' },
+                                                'Random Item 2' : { imageFilePath : '../images/item_images/random_D6.jpg', itemDescription : 'Depends on the Item' }
                                              },
                                      speed : 'Varies',
                                      range : 'Varies', 
@@ -184,10 +184,10 @@ var wardrobe =  {
                            score : 0
                          },
     
-                'The Lost' : { imageFilePath : '#', 
+                'The Lost' : { imageFilePath : '../images/char_images/TheLost.jpg', 
                            stats : { hearts : { heartType : 'N/A', heartCount : 0 }, 
                                      pickup : [ '1x Coin' ],
-                                     items : { 'Dead Dove Non-Spectral Variant' : { imageFilePath : '#', itemDescription : 'You can fly over obstacles.' } },
+                                     items : { 'Dead Dove Non-Spectral Variant' : { imageFilePath : '../images/item_images/deadDove.jpg', itemDescription : 'You can fly over obstacles.' } },
                                      speed : 2, 
                                      range : 2,
                                      tears : 1, 
