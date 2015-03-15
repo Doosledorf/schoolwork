@@ -1,21 +1,30 @@
 //GENERTATE CARD
 function generate_StatCard(winningChar) {
     
+    var statValue, statName, statColor;
+    
     //Update splash image for winning character
     var splash_hold = document.getElementById('splash_hold');
     var splash_image = generate_Element('img', { src: wardrobe[winningChar].imageFilePath, alt: 'Winner!' } );
     splash_hold.appendChild(splash_image);
     
-
     //Each stat of the winning character
     for ( var stat in wardrobe[winningChar].stats ){
-
-       //Get stat and its value
-       var statValue = wardrobe[winningChar].stats[stat];
-       var statName = stat;
+        
+       statName = stat;
+        
+    
+       if (stat == 'hearts'){ 
+           statValue = wardrobe[winningChar].stats[stat].heartCount; 
+           statColor = wardrobe[winningChar].stats[stat].heartType;
+       }
+       else{
+           statValue = wardrobe[winningChar].stats[stat];
+           statColor = 'green';
+       }
 
        //Create a statbar
-       create_StatDivs( statValue, statName) 
+       create_StatDivs( statName, statValue, statColor) 
     }
 }
 
@@ -27,9 +36,7 @@ function get_HighScore(){
     var winner;
     
     //Objects cant be sorted, so push char/score key/value to assoc array
-    for ( var char in wardrobe ){
-        scoresToSort.push([char, wardrobe[char].score]);
-    } 
+    for ( var char in wardrobe ){ scoresToSort.push([char, wardrobe[char].score]); } 
     
     //sort greatest to least
     scoresToSort.sort( function(a, b){ return b[1] - a[1]} );
@@ -41,7 +48,7 @@ function get_HighScore(){
 
     
 //CREATE CARD FRAMEWORK, INJECT INFO
-function create_StatDivs( stat, value ){
+function create_StatDivs( stat, value, color ){
     
     var bar_color, bar_count;
     
@@ -57,7 +64,7 @@ function create_StatDivs( stat, value ){
     stat_div.appendChild(stat_span);
     
     //create div, id based on stat 
-    var bar_container = generate_Element('div', { class: 'stat_bar', name: 'stat_bar' } );
+    var bar_container = generate_Element('div', { class: 'stat_bar', name: stat } );
     
     //add to stat
     stat_div.appendChild(bar_container);
@@ -65,36 +72,16 @@ function create_StatDivs( stat, value ){
     //Add to doc    
     document.getElementById('info_hold').appendChild(stat_div);
     
-    //In the case of 'heart' values, need to sift through nested object for value
-    if ( stat == 'hearts' ){
-        
-        bar_color = hearts.heartType;
-        bar_count = hearts.heartCount;
-    }
-    
-    //In the case of any other stat
-    else{
-        
-        bar_color = 'green';
-        bar_count = value;
-    } 
-    
     //Pass values
-    animate_Bars(stat, bar_color, bar_count);
-}   
-    
-
-//ANIMATE BARS/ INJECTING THEM INTO STATS
-function animate_Bars(stat, color, count){
+    var stat_block_path = 'assets/images/' + color + '_stat.jpg';
     
     //Create tag
-    for (var i = 0; i <= count; i++){
+    for (var i = 0; i < value; i++){
+        
         console.log('assets/images/' + color + '_stat.jpg');
-        var stat_unit = generate_Element( 'img', { class: 'stat_unit', name: 'stat_unit', src : 'assets/images/' + color + '_stat.jpg', alt : 'Stat Unit' } );
-     
-        document.getElementById('stat_bar').appendChild(stat_unit);
+        var stat_unit = generate_Element( 'img', { class: 'stat_unit', name: 'stat_unit', src : stat_block_path, alt : 'Stat Unit' } );
+        document.getElementsByName(stat)[0].appendChild(stat_unit); 
     }
-}
-
-
+}   
+    
 generate_StatCard( get_HighScore() );
