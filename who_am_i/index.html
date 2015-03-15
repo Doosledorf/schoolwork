@@ -8,20 +8,15 @@
     <meta name = 'description' content = 'BoI Character Creator'>
     <meta name = 'author' content = 'Roberto Ortiz'>
     <link rel = 'stylesheet' type = "text/css" href = 'assets/css/style.css'>
-    <script src = 'assets/js/char_db.js'></script>
-    <script src = 'assets/js/char_func.js'></script>
     
-    
-
+    <script src = 'assets/js/util.js'></script>
     
 </head>
 
 <body>
-    
     <script>
-        console.log(parseInt((wardrobe['Azazel'].score)));
-        console.log(getImage('Azazel'));
     
+       
     </script>
     
     <div id = 'main_container'>
@@ -31,15 +26,20 @@
          
         </div>
         
-        <div id = 'test_container'><img src = "assets/images/char_images/Azazel.jpg"></div>
         <div id = 'question_container'></div>
             
         <div id = 'final_form_container'></div>
         
-        <div id = 'char_stat_container'></div>
+        <div id = 'char_stat_container'>
+            <div id = 'splash_hold'></div>
+            <ul id = 'info_hold'></ul>
+        </div>
         
         
     </div>
+    
+    <script src = 'assets/js/char_db.js'></script>
+    <script src = 'assets/js/char_func.js'></script>
     
 </body>
     
