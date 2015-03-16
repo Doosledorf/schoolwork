@@ -26,7 +26,9 @@
          
         </div>
         
-        <div id = 'question_container'></div>
+        <div id = 'question_container'>
+            <form></form>
+        </div>
             
         <div id = 'final_form_container'></div>
         
@@ -37,10 +39,20 @@
         
         
     </div>
-    
+    <script src = 'assets/js/quest_db.js'></script>
+    <script src = 'assets/js/quest_func.js'></script>
     <script src = 'assets/js/char_db.js'></script>
     <script src = 'assets/js/char_func.js'></script>
-    
+    <script>console.log(wardrobe['Azazel'].score);
+            
+            update_AffectedScores(['Azazel'], -1);
+            console.log(wardrobe['Azazel'].score);
+            
+            update_AffectedScores(['Azazel'],1);
+            console.log(wardrobe['Azazel'].score);
+        
+            
+    </script>
 </body>
     
 </html>
