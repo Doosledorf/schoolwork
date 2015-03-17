@@ -1,34 +1,38 @@
-<!DOCTYPE html>
-<html lang = 'en'>
-	<head>
-		<meta charset = 'UTF-8'/>
-		<title>Dungeons</title>
-		<link href="../Assets/proj_style.css" rel="stylesheet" type="text/css">
-		<!--#include virtual="../Assets/media_queries.html"-->
-	</head>
-	
-	<body>
-		<div id = "main_wrap">
-			<!--#include virtual="../Assets/headerNav.html"-->
-			
-			<div class = "content_wrap">
+<?php
+    include "Assets/util/functions.php";
+    print_header("Dungeons");
+?>
+                <h2>Dungeons</h2>
+                <div class = 'slider_container'>
+                    <div class = 'slider_wrapper'>
+                        <div id = 'slider' >
+                            <?php
+                                populate_slider('Instances/dungeons');
+                            ?>
+                         </div>
+                        <script src = 'Assets/js/image_slider_func.js'></script>
+                        <button type = 'button' class = 'slider_nav' id = 'prev' onclick = 'prev_slide();'>Previous</button> 
+                        <button type = 'button' class = 'slider_nav' id = 'next' onclick = 'next_slide();'>Next</button>
+                    </div>
+                </div>
+                
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/utgarde_keep.jpg" alt ="Utgarde Keep | Utgarde Pinnacle"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/utgarde_keep.jpg" alt ="Utgarde Keep | Utgarde Pinnacle"/>
 					
 					
 						<h1>Utgarde Keep | Utgarde Pinnacle</h1>
 						<p>		Minimum Level: 67 and 79 respectively </p>
 						<p>		Loacation: Howling Fjord</p>
 						<p>		Final Boss: Ingvar the Plunderer (Keep) and King Ymiron (Pinnacle)</p>
-						<p>		The group is charged with storming the building--fighting Ymiron's minions to reach Ymirion himself, ending his assault on the inhabitants of Howling Fjord.</p>
+						<p>		The group is charged with storming the building--fighting Ymiron's minions and reach Ymirion himself, ending his assault on the inhabitants of Howling Fjord.</p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/the_nexus.jpg" alt ="The Nexus | The Oculus"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/the_nexus.jpg" alt ="The Nexus | The Oculus"/>
 					
 					
 						<h1>The Nexus | The Oculus</h1>
@@ -42,7 +46,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/azjol_nerub.jpg" alt ="Azjol Nerub"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/azjol_nerub.jpg" alt ="Azjol Nerub"/>
 					
 					
 						<h1>Azjol-Nerub</h1>
@@ -56,7 +60,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/ahn_kahet.jpg" alt ="Ahn'Kahet"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/ahn_kahet.jpg" alt ="Ahn'Kahet"/>
 					
 					
 						<h1>Ahn'Kahet</h1>
@@ -70,7 +74,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/draktharon_keep.jpg" alt ="Drak'Tharon Keep"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/draktharon_keep.jpg" alt ="Drak'Tharon Keep"/>
 					
 					
 						<h1>Drak'Tharon Keep</h1>
@@ -83,7 +87,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/violet_hold.jpg" alt ="Violet Hold"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/violet_hold.jpg" alt ="Violet Hold"/>
 					
 					
 						<h1>Violet Hold</h1>
@@ -96,7 +100,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/gundrak.jpg" alt ="Gun'Drak"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/gundrak.jpg" alt ="Gun'Drak"/>
 					
 					
 						<h1>Gun'Drak</h1>
@@ -110,7 +114,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/hall_of_stone.jpg" alt ="Halls of Stone"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/hall_of_stone.jpg" alt ="Halls of Stone"/>
 					
 					
 						<h1>Halls of Stone | Halls of Lightning</h1>
@@ -123,7 +127,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/trial_of_the_champion.jpg" alt ="Trial of the Champion"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/trial_of_the_champion.jpg" alt ="Trial of the Champion"/>
 					
 					
 						<h1>Trial of the Champion</h1>
@@ -136,7 +140,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/halls_of_reflection.jpg" alt ="Halls of Reflection"/>
+					<img class = "infoImage" src = "Assets/images/Instances/dungeons/halls_of_reflection.jpg" alt ="Halls of Reflection"/>
 					
 					
 						<h1>Forge of Souls | Pit of Saron | Halls of Reflection </h1>
@@ -149,9 +153,4 @@
 				</div>
 				
 				
-			</div>
-			
-			<!--#include virtual="../Assets/footer.html"-->
-			</div>
-	</body>
-</html>
+			<?php print_footer() ?>

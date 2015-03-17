@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang = 'en'>
-	<head>
-		<meta charset = 'UTF-8'/>
-		<title>Native Races</title>
-		<link href="../Assets/proj_style.css" rel="stylesheet" type="text/css">
-		<!--#include virtual="../Assets/media_queries.html"-->
-	</head>
-	
-	<body>
-		<div id = "main_wrap">
-			<!--#include virtual="../Assets/headerNav.html"-->
-			
-			<div class = "content_wrap">
-				
+<?php
+    include "Assets/util/functions.php";
+    print_header("Native Races");
+?>
+				<h2>Native Races</h2>
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/tuskarr.jpg" alt ="A Tuskarr"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/tuskarr.jpg" alt ="A Tuskarr"/>
 					
 					
 						<h1>Tuskarr</h1>
@@ -30,7 +20,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/taunka.jpg" alt ="A Taunka"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/taunka.jpg" alt ="A Taunka"/>
 					
 					
 						<h1>Taunka</h1>
@@ -42,7 +32,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/wolvar.jpg" alt ="A Wolvar"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/wolvar.jpg" alt ="A Wolvar"/>
 					
 					
 						<h1>Wolvar</h1>
@@ -54,7 +44,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/nerubian.jpg" alt ="A Nerubian"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/nerubian.jpg" alt ="A Nerubian"/>
 					
 					
 						<h1>Nerubian</h1>
@@ -69,7 +59,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/furbolg.jpg" alt ="A Polar Furbolg"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/furbolg.jpg" alt ="A Polar Furbolg"/>
 					
 					
 						<h1>Polar Furbolg</h1>
@@ -81,19 +71,19 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/oracles.jpg" alt ="A Gorloc"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/oracles.jpg" alt ="A Gorloc"/>
 					
 					
 						<h1>Gorloc</h1>
 						<p>		Northrend cousins of the Murloc inherit much of their traits from their relatives: being primitive and hostile. However, The Oracles, a group of Gorlocs 
-								exposed to Titan technology are much more intelligent and see themselves as guardians of the pylons in Sholazar Basin. This is their primary reason for 
-								battling the Wolvar inhabiting the Basin. Their leader, High-Oracle Soo-say makes sure that The Oracles remain vigilant of the encroaching Scourge as well</p>
+								exposed to Titan technology are much more intelligent and see themselves as guardians of the pylons in Sholazar Basin. There lies the reason for 
+								battling the Wolvar inhabiting the Basin. Their leader, High-Oracle Soo-say makes sure that The Oracles also remain vigilant of the encroaching Scourge as well.</p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/sons_of_hodir.jpg" alt ="An Ice Giant"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/sons_of_hodir.jpg" alt ="An Ice Giant"/>
 					
 					
 						<h1>Giants</h1>
@@ -107,19 +97,14 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/vrykul.jpg" alt ="A Vrykul"/>
+					<img class = "infoImage" src = "Assets/images/People/native_races/vrykul.jpg" alt ="A Vrykul"/>
 					
 					
 						<h1>Vrykul</h1>
 						<p>		Half giant, half-human, the Vrykul are native to the Howling Fjord and led by King Ymiron. They are the direct creation of the Titans.</p>
 						<p>		King Ymiron ordered a certain generation of Vrykul to be killed after being deemed "ugly." Not all were killed and instead
-								migrated througout the rest of Azeroth, perhaps becoming humans. Knowing this, they have begun their 
-								offense from Utgarde Keep on the Alliance humans inhabiting the Howling Fjord. Moreso, they serve the Lich King directly.</p>
+								migrated througout the rest of Azeroth, perhaps evolving to become humans. Knowing this, they have begun their 
+								offense on the Alliance humans inhabiting the Howling Fjord. Moreso, they serve the Lich King directly.</p>
 					
 				</div>
-			</div>
-			
-			<!--#include virtual="../Assets/footer.html"-->
-		</div>
-	</body>
-</html>
+			<?php print_footer() ?>

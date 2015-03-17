@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang = 'en'>
-	<head>
-		<meta charset = 'UTF-8'/>
-		<title>Factions</title>
-		<link href="../Assets/proj_style.css" rel="stylesheet" type="text/css">
-		<!--#include virtual="../Assets/media_queries.html"-->
-	</head>
-	
-	<body>
-		<div id = "main_wrap">
-			<!--#include virtual="../Assets/headerNav.html"-->
-			
-			<div class = "content_wrap">
-				
+<?php
+    include "Assets/util/functions.php";
+    print_header("Factions");
+?>
+				<h2>Factions</h2>
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/alliance_vanguard.jpg" alt ="Alliance Vanguard Banner"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/alliance_vanguard.jpg" alt ="Alliance Vanguard Banner"/>
 					
 					
 						<h1>Alliance Vanguard</h1>
@@ -29,7 +19,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/horde_expedition.jpg" alt ="Horde Expedition Banner"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/horde_expedition.jpg" alt ="Horde Expedition Banner"/>
 					
 					
 						<h1>Horde Expedition</h1>
@@ -42,19 +32,19 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/knights_of_ebon_blade.jpg" alt ="Knights of the Ebon Blade"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/knights_of_ebon_blade.jpg" alt ="Knights of the Ebon Blade"/>
 					
 					
 						<h1>Knights of the Ebon Blade</h1>
 						<p>		Led by Darion Morgraine and composed primarily of Death Knights this group is the main hub of neutral Death Knights across Azeroth. 
-								Their goal is to release Death Knights under the Lich King's control and establish a haven for his brethren. Furthermore, they wish to see the Lich King's
+								Their goal is to release Death Knights under the Lich King's control and establish a haven for their brethren. Furthermore, they wish to see the Lich King's
 								demise.</p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/argent_vanguard.jpg" alt ="Argent Vanguard"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/argent_vanguard.jpg" alt ="Argent Vanguard"/>
 					
 					
 						<h1>Argent Vanguard</h1>
@@ -65,27 +55,22 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/kirin_tor.jpg" alt ="Kirin Tor"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/kirin_tor.jpg" alt ="Kirin Tor"/>
 					
 					
 						<h1>Kirin Tor</h1>
-						<p>		Being the Magi Senate of Dalaran, the Kirin Tor rebuilt Dalaran and lifted it to the skies. It remained neutral among the Alliance
+						<p>		Being the Magi Senate of Dalaran, the Kirin Tor rebuilt Dalaran and lifted it to the skies. They remained neutral among the Alliance
 								and Horde in-fighting, but wished to bridge the two so that they may recieve aid against Malygos.</p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/People/wymcrest_accord.jpg" alt ="Wyrmcrest Accord"/>
+					<img class = "infoImage" src = "Assets/images/People/factions/wymcrest_accord.jpg" alt ="Wyrmcrest Accord"/>
 					
 					
 						<h1>Wyrmrest Accord</h1>
-						<p>		The Accord is an alliance of the Red, Black, Green and Bronze Dragonflight members against Malygos. </p>
+						<p>		The Accord is an alliance of Red, Black, Green and Bronze Dragonflight members against Malygos. </p>
 					
 				</div>
-			</div>
-				
-			<!--#include virtual="../Assets/footer.html"-->
-		</div>
-	</body>
-</html>
+			<?php print_footer() ?>

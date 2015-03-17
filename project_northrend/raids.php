@@ -1,21 +1,11 @@
-<!DOCTYPE html>
-<html lang = 'en'>
-	<head>
-		<meta charset = 'UTF-8'/>
-		<title>Raids</title>
-		<link href="../Assets/proj_style.css" rel="stylesheet" type="text/css">
-		<!--#include virtual="../Assets/media_queries.html"-->
-	</head>
-	
-	<body>
-		<div id = "main_wrap">
-			<!--#include virtual="../Assets/headerNav.html"-->
-			
-			<div class = "content_wrap">
-				
+<?php
+    include "Assets/util/functions.php";
+    print_header("Raids");
+?>
+				<h2>Raids</h2>
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/naxxramas.jpg" alt ="Naxxramas"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/naxxramas.jpg" alt ="Naxxramas"/>
 					
 					
 						<h1>Naxxramas</h1>
@@ -29,7 +19,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/obsidian_sanctum.jpg" alt ="The Obsidian Sanctum"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/obsidian_sanctum.jpg" alt ="The Obsidian Sanctum"/>
 					
 					
 						<h1>The Obsidian Sanctum</h1>
@@ -38,13 +28,13 @@
 						<p>		Final Boss: Sartharion</p>
 						<p>		Alexstrasza has spread her forces thin battling the Blue Dragonflight and the Scourge. In lieu of Malygos' treachery, however, she seeks
 								to rid Wyrmrest of anymore treachery. Sartharion, a Black Dragonflight, has fled into the Obsidian Sanctum with his twilight eggs. Knowing this, Alexstrasza sends
-								need of help to Dalaran. Players are tasked with helping her via the Chamber of Aspects--its entrance under Wyrmrest Temple. </p>
+								need of help to Dalaran. Players are tasked with helping her in the Chamber of the Aspects--its entrance under Wyrmrest Temple. </p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/eye_of_eternity.jpg" alt ="The Eye Of Eternity"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/eye_of_eternity.jpg" alt ="The Eye Of Eternity"/>
 					
 					
 						<h1>Eye of Eternity</h1>
@@ -58,7 +48,7 @@
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/vault_of_archavon.jpg" alt ="Vault of Archavon"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/vault_of_archavon.jpg" alt ="Vault of Archavon"/>
 					
 					
 						<h1>Vault of Archavon</h1>
@@ -71,49 +61,49 @@
 				
 				<div class = "info_panel">  
 					
-					<img class = "infoImage" src = "../Assets/Instances/ulduar.jpg" alt ="Ulduar"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/ulduar.jpg" alt ="Ulduar"/>
 					
 					
 						<h1>Ulduar</h1>
 						<p>		Minimum Level: 80 </p>
 						<p>		Loacation:	The Storm Peaks</p>
 						<p>		Final Boss: Yogg-Saron</p>
-						<p>		Players battle that which has had its corrupted tendrils rooted in many throughout Northrend: The Old God Yogg-Saron. They
-								must defeat that which was only <em>contained</em> by the ancient Titans. </p>
+						<p>		Players battle that which has had its corrupted tendrils rooted in many throughout Northrend: The Old God, Yogg-Saron. They
+								must defeat that which could only be <em>contained</em> by the ancient Titans. </p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/trial_of_the_crusader.jpg" alt ="Trial of the Crusader"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/trial_of_the_crusader.jpg" alt ="Trial of the Crusader"/>
 					
 					
 						<h1>Trial of the Crusader</h1>
 						<p>		Minimum Level: 80 </p>
 						<p>		Loacation:	Icecrown</p>
 						<p>		Final Boss: Anub'arak</p>
-						<p>		Anub'ark is resurrected by the Lich King after the events in Azjon-Nerub. He is tasked to grief the tournament underway from under. 
+						<p>		Anub'ark is resurrected by the Lich King after the events in Azjol-Nerub. He is tasked with causing havoc at the tournament underway. 
 								Players are charged with ending him...again. </p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/ruby_sanctum.jpg" alt ="Ruby Sanctum"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/ruby_sanctum.jpg" alt ="Ruby Sanctum"/>
 					
 					
 						<h1>The Ruby Sanctum</h1>
 						<p>		Minimum Level: 80 </p>
 						<p>		Loacation:	Dragonblight</p>
 						<p>		Final Boss: Halion</p>
-						<p>		After defeating Sartharion, it is made apparent that Halion, member of the Black Dragonflight, has led his brethren in an attack on the Ruby Sanctum and
+						<p>		After defeating Sartharion, it is made apparent that Halion, a member of the Black Dragonflight, has led his brethren in an attack on the Ruby Sanctum and
 								Wyrmrest Accord itself. Players see to it that he does not pull through with his plans. </p>
 					
 				</div>
 				
 				<div class = "info_panel">
 					
-					<img class = "infoImage" src = "../Assets/Instances/icecrown_citadel.jpg" alt ="Icecrown Citadel"/>
+					<img class = "infoImage" src = "Assets/images/Instances/instances/icecrown_citadel.jpg" alt ="Icecrown Citadel"/>
 					
 					
 						<h1>Icecrown Citadel</h1>
@@ -122,13 +112,8 @@
 						<p>		Final Boss: The Lich King</p>
 						<p>		This is it. Players have defeated all of the Lich King's minions. The Alliance and Horde have banded together at his gates and the raid is already underway. Players
 								climb up the citadel to put an end to the rest of the Lich King's chief staff and then the King himself. Can they defeat he who controls the Scourge, 
-								thus finally putting an end to the threat that faces Northrend and the rest of Azeroth?</p>
+								thus finally putting an end to the threat that Azeroth?</p>
 					
 				</div>
 				
-			</div>
-			
-			<!--#include virtual="../Assets/footer.html"-->
-			</div>
-	</body>
-</html>
+			<?php print_footer() ?>
