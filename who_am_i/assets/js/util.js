@@ -10,7 +10,7 @@ function generate_Element(typeOfElement, attributeObject, textOptional){
         }
     }
     
-    //If text exists, create textNode and append.
+    //If text exists, create textNode and append. Pretty common so far. Perhaps adapt this for anything?
     if (textOptional){ 
         var elementText = document.createTextNode(textOptional);
         newEle.appendChild( elementText );

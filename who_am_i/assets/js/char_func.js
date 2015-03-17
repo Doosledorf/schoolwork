@@ -6,6 +6,7 @@ function generate_StatCard(winningChar) {
     
     //Update splash image for winning character
     var splash_hold = document.getElementById('splash_hold');
+    console.log(winningChar);
     var splash_image = generate_Element('img', { src: wardrobe[winningChar].imageFilePath, alt: 'Winner!' } );
     splash_hold.appendChild(splash_image);
     
@@ -36,7 +37,9 @@ function generate_StatCard(winningChar) {
 //    splash_hold.appendChild(pickup_span);
 }
 
-//GET HIGH SCORE, RETURN WINNER. COMPLETE.///////////////////////////////////////////////////////////////////////
+
+
+//GET HIGH SCORE, RETURN WINNER. COMPLETE.
 function get_HighScore(){
     
     var scoresToSort = []; //Score:Char Assoc Array
@@ -52,24 +55,27 @@ function get_HighScore(){
     //return high-scorer's name
     return winner;
 }
-/////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-//UPDATE AFFECTED SCORES. COMPLETE//////////////////////////////////////////////////////////////////////////////
-function update_AffectedScores( affectedCharArray, operation ){
+
+
+//UPDATE AFFECTED SCORES. COMPLETE.
     
     //Loop through array.
     for ( var i = 0,  l = affectedCharArray.length; i < l; i++ ){
         switch( operation ){
                 case 1: //Add one to the score of each character within wardrobe
-                    wardrobe[affectedCharArray[i]].score++; 
+                    wardrobe[affectedCharArray[i]].score++;
+                    console.log(wardrobe[affectedCharArray[i]]);
                     break;
                 case -1: //Subtract one "               "
                     wardrobe[affectedCharArray[i]].score--; 
+                    console.log(wardrobe[affectedCharArray[i]]);
                     break;
         }
     }
 }
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
 
 
 //CREATE CARD FRAMEWORK, INJECT INFO
@@ -105,11 +111,10 @@ function create_StatDivs( stat, value, color ){
         var stat_unit = generate_Element( 'img', { class: 'stat_unit', name: 'stat_unit', src : stat_block_path, alt : 'Stat Unit' }, '' );
         document.getElementsByName(stat)[0].appendChild(stat_unit); 
     }
-}   
+}
 
 
 function create_ItemDivs(){
     
 }
     
-generate_StatCard( get_HighScore() );

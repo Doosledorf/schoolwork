@@ -15,7 +15,7 @@ var wardrobe =  {
                                      },
                               unlock : 'Make three deals with the devil in a single run.',
                               comment: 'You can fly over all obstacles and shoot lasers. AND you can still obtain red hearts. Nuff said.',
-                              score : 1
+                              score : 0
                            },
                 
                  'Issac (w/D6)': { imageFilePath : 'assets/images/char_images/Issac.jpg',
@@ -31,7 +31,7 @@ var wardrobe =  {
                                    items : { 'D6' : { imageFilePath : 'assets/images/item_images/random_D6.jpg', itemDescription : 'Lets you reroll any pedestal item. 6x room charge.' } },
                                    unlock : 'Issac\'s D6 is unlocked by beating ??? with Issac.',
                                    comment : 'Yes, the D6 is so powerful that there is a \'new\' javascript object for this \'character\'',
-                                   score : 4
+                                   score : 0
                                  }, 
     
                  'Issac': { imageFilePath : 'assets/images/char_images/Issac.jpg',
@@ -47,7 +47,7 @@ var wardrobe =  {
                             items : { 'None' : { imageFilePath : '#', itemDescription : 'N/A' } },
                             unlock : 'Starting character.',
                             comment : 'Vanilla Issac is just vanilla. Not bad, not great.',
-                            score : 5 
+                            score : 0 
                            },
     
                  'Magdalene' : { imageFilePath : 'assets/images/char_images/Magdalene.jpg', 
