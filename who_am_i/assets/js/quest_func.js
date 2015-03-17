@@ -114,14 +114,13 @@ function nuke_Siblings(which){
     
     var whichIndex = indexOf(which.getAttribute('name'), QUESTION_PATH);
     
-    console.log(whichIndex);
-    
-    
-    
-   
+    for ( var i = 0, l = QUESTION_PATH.length; i < l; i++ ){
+        
+        if (i <= whichIndex) continue;
+        if (i > whichIndex){
+            document.forms[0].removeChild(document.forms[0].children[i]);
+            QUESTION_PATH.splice(i, 1);
+        }
+    }  
     
 }
-
-
-
-

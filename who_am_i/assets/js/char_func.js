@@ -39,6 +39,14 @@ function generate_StatCard(winningChar) {
 
 
 
+//NUKE STATCARD
+function nuke_StatCard(){
+
+    var statCard = document.getElementById('char_stat_container');
+}
+    
+
+
 //GET HIGH SCORE, RETURN WINNER. COMPLETE.
 function get_HighScore(){
     
@@ -85,7 +93,7 @@ function update_AffectedScores( affectedCharArray, operation){
 //RECACLULATE SCORE BASED ON SCORE
 function recalculate_Score( pathArray ){
 
-
+    
 }
     
     
