@@ -1,4 +1,6 @@
-var QUESTION_PATH = [];
+// DAMN IT IE7! I JUST WANNA USE indexOf()
+var QUESTION_PATH = []; // QUESTION PROGRESSION MADE
+var ANSWER_PATH = []; // ANSWER PROGRESSION MADE. STORE BOTH AS JSON IF TIME ALLOWS.
 
 //INITIATE QUESTIONS. THREE CASES
 //First: At the beginning. No parents.
@@ -16,38 +18,31 @@ function init(){
 
 
 
-// LITTLE JANKY
+// LITTLE JANKY BUT MAKING PROGRESS
 function progress(which){ 
     
-    /*var sibling = which.nextSibling;
-    var siblingParent;
-    var questionNumber = qData[which.getAttribute('name')];
-    console.log(which);
+    //Nuke siblings in case we are in the 'middle' of the questionairre
+    nuke_Siblings(which);
     
-    //Nukes the select siblings after the one changed...in case of changing the middle element. This is gonna be janky.
+    //Get adjusted index of choice.
+    var selectedChoiceIndex = which.selectedIndex-1;
+    var affectedScores = qData[which.getAttribute('name')].options[selectedChoiceIndex].scoresAffected;
     
-    while( sibling.nextSibling){
-        sibling = sibling.nextSibling;
-        parent = 
-        
-        update_AffectedScores( qData
-        
-    }*/
-
-    //console.log(qData[which.getAttribute('name')].);
-    //update_AffectedScores( qData[which.getAttribute('name')].options, -1);
-                      
-    var affectedScores = qData[which.getAttribute('name')].options[which.selectedIndex-1].scoresAffected;
+    //Store and update scores
+    ANSWER_PATH.push(selectedChoiceIndex);
     update_AffectedScores( affectedScores, 1);
     
+    //If no children left, get winner and generate his stats.
     if (get_NextQuestion(which) == -1){
         generate_StatCard(get_HighScore());
     }
-     
+    
+    //Get the next question in the chain. Instantiate it and place it an array.
     else{
         create_QuestionDiv(get_NextQuestion(which));
-    }
-        
+        QUESTION_PATH.push(get_NextQuestion(which));
+    }      
+    console.log(QUESTION_PATH);
 }
 
 
@@ -97,3 +92,36 @@ function get_NextQuestion(which){
             return childQuestions[which.selectedIndex-1]; //If so, return the next question in 'qX' form. The '-1' accounts for '--'
     }
 }
+
+
+
+// CUZ SCREW IE7
+function indexOf( which, array ){
+    
+    for (var i = 0, l = array.length; i <l ; i++){
+        if( which == array[i]){ return i }
+        else { continue }
+    }
+    return -1;
+}
+
+
+
+// NUKE ALL SIBLINGS AFTER DESIGNATED SELECT. UPDATES SCORES ACCORDINGLY.
+function nuke_Siblings(which){
+    
+    var all_Questions = document.getElementsByTagName('select');
+    
+    var whichIndex = indexOf(which.getAttribute('name'), QUESTION_PATH);
+    
+    console.log(whichIndex);
+    
+    
+    
+   
+    
+}
+
+
+
+

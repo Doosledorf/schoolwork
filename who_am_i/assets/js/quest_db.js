@@ -21,7 +21,7 @@ var qData = { q1 : { question : 'Do you like being OP?',
                    },
                     
               q3 : { question : 'Do you like concussions?',
-                     options : [{ text : 'Only if it puts me into a come.',
+                     options : [{ text : 'Only if it puts me into a coma.',
                                  scoresAffected : ['The Lost', '???']
                                },
                                 { text : 'I like to keep my IQ intact, thanks.', 

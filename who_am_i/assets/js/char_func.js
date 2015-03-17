@@ -59,7 +59,7 @@ function get_HighScore(){
 
 
 //UPDATE AFFECTED SCORES. COMPLETE.
-    
+function update_AffectedScores( affectedCharArray, operation){    
     //Loop through array.
     for ( var i = 0,  l = affectedCharArray.length; i < l; i++ ){
         switch( operation ){
@@ -71,12 +71,24 @@ function get_HighScore(){
                     wardrobe[affectedCharArray[i]].score--; 
                     console.log(wardrobe[affectedCharArray[i]]);
                     break;
+                case 0: //May as well have a reset.
+                    for( var char in wardrobe ){
+                        wardrobe[char].score = 0;
+                    }
+                    break;
         }
     }
 }
 
 
 
+//RECACLULATE SCORE BASED ON SCORE
+function recalculate_Score( pathArray ){
+
+
+}
+    
+    
 
 //CREATE CARD FRAMEWORK, INJECT INFO
 function create_StatDivs( stat, value, color ){

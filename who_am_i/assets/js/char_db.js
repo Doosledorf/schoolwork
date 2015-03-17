@@ -166,13 +166,13 @@ var wardrobe =  {
                          },
     
                 'Eden' : { imageFilePath : 'assets/images/char_images/Eden.jpg', 
-                           stats : { hearts : { heartType : 'Varies', heartCount : 'Varies' }, 
-                                     speed : 'Varies',
-                                     range : 'Varies', 
-                                     tears : 'Varies', 
-                                     shotSpeed : 'Varies', 
-                                     damage : 'Varies', 
-                                     luck : 'Varies' 
+                           stats : { hearts : { heartType : 'red', heartCount : 3 }, 
+                                     speed : 2,
+                                     range : 2, 
+                                     tears : 1, 
+                                     shotSpeed : 2, 
+                                     damage : 2, 
+                                     luck : 1 
                                    },
                            pickup : [ 'Varies' ],
                            items : { 
@@ -180,12 +180,12 @@ var wardrobe =  {
                                         'Random Item 2' : { imageFilePath : 'assets/images/item_images/random_D6.jpg', itemDescription : 'Depends on the Item' }
                                    },
                            unlock : 'Defeat Mom\'s Heart',
-                           comment : 'Mixed bag here. Sometimes you\'ll start off bad. Othertimes, you\'ll be hilariously OP.',
+                           comment : 'Mixed bag here. The stats and items vary. Sometimes you\'ll start off bad. Othertimes, you\'ll be hilariously OP.',
                            score : 0
                          },
     
                 'The Lost' : { imageFilePath : 'assets/images/char_images/TheLost.jpg', 
-                           stats : { hearts : { heartType : 'red', heartCount : 0 }, 
+                           stats : { hearts : { heartType : 'red', heartCount : 1 }, 
                                      speed : 2, 
                                      range : 2,
                                      tears : 1, 
@@ -196,7 +196,7 @@ var wardrobe =  {
                            pickup : [ '1x Coin' ],
                            items : { 'Dead Dove Non-Spectral Variant' : { imageFilePath : 'assets/images/item_images/deadDove.jpg', itemDescription : 'You can fly over obstacles.' } },
                            unlock : 'In this exact order, Issac must die to a Mulliboom in the first set of rooms, Magdalene to her own bomb in the second, Judas to Mom in the third and Azazel to Satan in Sheol.', 
-                           comment : 'Sane people HATE him!',
+                           comment : 'Sane people HATE him! Take a hit and you die. Good luck dealing with good \'ol RNG.',
                            score : 0
                          }
 }
