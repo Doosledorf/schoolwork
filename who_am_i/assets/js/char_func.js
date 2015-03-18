@@ -30,11 +30,6 @@ function generate_StatCard(winningChar) {
        //Create a statbar for said stat, using values provided.
        create_StatDivs( statName, statValue, statColor) 
     }
-    
-//    var pickup_span = document.createElement('span');
-//    var pickup_text = document.createTextNode(wardrobe[winningChar].pickup);
-//    pickup_span.appendChild(span_text);
-//    splash_hold.appendChild(pickup_span);
 }
 
 
@@ -42,10 +37,17 @@ function generate_StatCard(winningChar) {
 //NUKE STATCARD
 function nuke_StatCard(){
 
-    var statCard = document.getElementById('char_stat_container');
+    emptyNode('splash_hold');
+    emptyNode('info_hold');
+}
+
+
+//NUKE FINAL FORM
+function nuke_EndForm(){
+
+    emptyNode('final_form_container');  
 }
     
-
 
 //GET HIGH SCORE, RETURN WINNER. COMPLETE.
 function get_HighScore(){
@@ -73,11 +75,11 @@ function update_AffectedScores( affectedCharArray, operation){
         switch( operation ){
                 case 1: //Add one to the score of each character within wardrobe
                     wardrobe[affectedCharArray[i]].score++;
-                    console.log(wardrobe[affectedCharArray[i]]);
+                    //console.log(wardrobe[affectedCharArray[i]]);
                     break;
                 case -1: //Subtract one "               "
                     wardrobe[affectedCharArray[i]].score--; 
-                    console.log(wardrobe[affectedCharArray[i]]);
+                    //console.log(wardrobe[affectedCharArray[i]]);
                     break;
                 case 0: //May as well have a reset.
                     for( var char in wardrobe ){
@@ -90,10 +92,16 @@ function update_AffectedScores( affectedCharArray, operation){
 
 
 
-//RECACLULATE SCORE BASED ON SCORE
+//RECACLULATE SCORE BASED ON SCORE. FIX!!!!
 function recalculate_Score( pathArray ){
-
     
+    //Nuke the scores to zero.
+    update_AffectedScores( [], 0);
+    
+    for ( var i = 0, l = pathArray.length; i<l; i++){
+        
+        update_AffectedScores(qData[QUESTION_PATH[i]].options[pathArray[i]].scoresAffected, 1);
+    }
 }
     
     
@@ -132,9 +140,3 @@ function create_StatDivs( stat, value, color ){
         document.getElementsByName(stat)[0].appendChild(stat_unit); 
     }
 }
-
-
-function create_ItemDivs(){
-    
-}
-    

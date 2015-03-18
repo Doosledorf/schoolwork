@@ -19,3 +19,31 @@ function generate_Element(typeOfElement, attributeObject, textOptional){
     return newEle; 
 }
 
+
+
+function emptyNode( nodeID ){
+    
+    
+    var theNode = document.getElementById(nodeID);
+    
+    var node_FirstChild = theNode.firstChild;
+    
+    while(node_FirstChild){
+        theNode.removeChild(node_FirstChild);
+        node_FirstChild = theNode.firstChild;
+    }
+}
+
+
+
+// CUZ SCREW IE7
+function indexOf( which, array ){
+    
+    for (var i = 0, l = array.length; i <l ; i++){
+        if( which == array[i]){ return i }
+        else { continue }
+    }
+    return -1;
+}
+
+    

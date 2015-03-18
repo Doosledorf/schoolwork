@@ -8,21 +8,20 @@
     <meta name = 'description' content = 'BoI Character Creator'>
     <meta name = 'author' content = 'Roberto Ortiz'>
     <link rel = 'stylesheet' type = "text/css" href = 'assets/css/style.css'>
-    
-    <script src = 'assets/js/util.js'></script>
+    <script src = 'assets/js/detection.js' type = "text/javascript"></script>
     
 </head>
 
-<body>
+<body onload = 'whatYouUsing();'>
     <script>
-    
+        
        
     </script>
     
     <div id = 'main_container'>
         
         <div id = 'title_container'>
-            <img src = "assets/images/title.jpg" alt = 'title splash'>
+            <img id = 'title_image' src = "assets/images/title.jpg" alt = 'title splash'>
          
         </div>
         
@@ -30,7 +29,9 @@
             <form></form>
         </div>
             
-        <div id = 'final_form_container'></div>
+        <div id = 'final_form_container'>
+            <form></form>
+        </div>
         
         <div id = 'char_stat_container'>
             <div id = 'splash_hold'></div>
@@ -39,13 +40,13 @@
         
         
     </div>
-    <script src = 'assets/js/quest_db.js'></script>
-    <script src = 'assets/js/quest_func.js'></script>
-    <script src = 'assets/js/char_db.js'></script>
-    <script src = 'assets/js/char_func.js'></script>
-    <script>
-        init();
-            
+    <script src = 'assets/js/util.js' type="text/javascript"></script>
+    <script src = 'assets/js/quest_db.js' type='text/javascript'></script>
+    <script src = 'assets/js/quest_func.js' type='text/javascript'></script>
+    <script src = 'assets/js/char_db.js' type='text/javascript'></script>
+    <script src = 'assets/js/char_func.js' type='text/javascript'></script>
+    <script type='text/javascript'>
+        init(); 
     </script>
 </body>
     

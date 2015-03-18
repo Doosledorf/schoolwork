@@ -1,13 +1,34 @@
 body{
     background-color: #222;
+    min-height:100%;
 }
 
-.main_container{
+#main_container{
     background-color: #f0ead6;
-    height: 100%
+    height: 100%;
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 1%;
+    float:left;
 }
 
 .stat_unit{
     margin: auto 1px;
     border-radius: 1px;
+}
+
+#title_image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#question_container, #char_stat_container, #splash_hold, #info_hold{
+    float: left;
+}
+
+
+questionDiv{
+    width: 25%;
+    margin: 1%;
 }

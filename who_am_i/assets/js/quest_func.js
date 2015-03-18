@@ -21,6 +21,9 @@ function init(){
 // LITTLE JANKY BUT MAKING PROGRESS
 function progress(which){ 
     
+    nuke_StatCard();
+    nuke_EndForm();
+    
     //Nuke siblings in case we are in the 'middle' of the questionairre
     nuke_Siblings(which);
     
@@ -42,9 +45,43 @@ function progress(which){
         create_QuestionDiv(get_NextQuestion(which));
         QUESTION_PATH.push(get_NextQuestion(which));
     }      
+    console.log(ANSWER_PATH);
     console.log(QUESTION_PATH);
 }
 
+
+
+
+// NUKE ALL SIBLINGS AFTER DESIGNATED SELECT. UPDATES SCORES ACCORDINGLY. FIX!!!
+function nuke_Siblings(which){
+   
+    
+    var whichIndex = indexOf(which.getAttribute('name'), QUESTION_PATH);
+    console.log('whichIndex' + whichIndex);
+    
+    for ( var i = 0, l = ANSWER_PATH.length; i < l; i++ ){
+        
+        console.log(i);
+        //Case 1. Question is changed the last so far.
+        if (l < whichIndex) continue;
+        
+        //
+        if (l == whichIndex){
+            recalculate_Score( ANSWER_PATH);
+            
+        }
+        
+        if (l > whichIndex){
+            
+            ANSWER_PATH.splice(i, 1);
+            recalculate_Score( ANSWER_PATH );
+            
+            document.forms[0].removeChild(document.forms[0].children[i]);
+            QUESTION_PATH.splice(i, 1);   
+        
+        }
+    }  
+}
 
 
 // GENERATES THE QUESTIONS AND THEIR SELECT OPTIONS. COMPLETE
@@ -71,7 +108,6 @@ function create_QuestionDiv( questionNumber ){
             var anOption = generate_Element('option', { value: i}, qData[questionNumber].options[i].text);
             theOptions.appendChild(anOption);
     }
-    
 }
 
 
@@ -83,44 +119,18 @@ function get_NextQuestion(which){
     
     //Children questions of the current question
     var childQuestions = qData[which.getAttribute('name')].children;
-    
+    console.log(childQuestions);
     //Check if there is child questions
     if ( childQuestions.length == 0 ){
             return -1; //If not, return -1.
     }
     else{
+            console.log(childQuestions[which.selectedIndex-1]);
             return childQuestions[which.selectedIndex-1]; //If so, return the next question in 'qX' form. The '-1' accounts for '--'
     }
 }
 
 
 
-// CUZ SCREW IE7
-function indexOf( which, array ){
-    
-    for (var i = 0, l = array.length; i <l ; i++){
-        if( which == array[i]){ return i }
-        else { continue }
-    }
-    return -1;
-}
 
 
-
-// NUKE ALL SIBLINGS AFTER DESIGNATED SELECT. UPDATES SCORES ACCORDINGLY.
-function nuke_Siblings(which){
-    
-    var all_Questions = document.getElementsByTagName('select');
-    
-    var whichIndex = indexOf(which.getAttribute('name'), QUESTION_PATH);
-    
-    for ( var i = 0, l = QUESTION_PATH.length; i < l; i++ ){
-        
-        if (i <= whichIndex) continue;
-        if (i > whichIndex){
-            document.forms[0].removeChild(document.forms[0].children[i]);
-            QUESTION_PATH.splice(i, 1);
-        }
-    }  
-    
-}
